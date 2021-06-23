@@ -5,6 +5,8 @@ class BookmarkManager < Sinatra::Base
 
     attr_reader :url
 
+    enable :sessions, :method_override
+
     get '/' do
       "Hello World!"
     end
@@ -21,6 +23,11 @@ class BookmarkManager < Sinatra::Base
 
     get '/bookmarks/add' do
       erb :"bookmarks/add"
+    end
+
+    delete '/bookmarks/:id' do
+      Bookmark.delete(id: params[:id])
+      redirect '/bookmarks'
     end
 
     run! if app_file == $0
