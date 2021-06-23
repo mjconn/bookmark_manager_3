@@ -14,8 +14,12 @@ The website will have the following specification:
 ## User Stories:
 
 As a website user,
-So that I can access websites I use a lot, 
+So that I can access websites I use a lot,
 I'd like to see a list of bookmarks.
+
+As a website user,
+So that I can update my bookmarks,
+I want to be able to add bookmarks
 
 ## Domain Model:
 
